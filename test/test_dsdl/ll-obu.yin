@@ -2,10 +2,10 @@
 <module name="ll-obu"
         xmlns="urn:ietf:params:xml:ns:yang:yin:1"
         xmlns:test="http://example.com/ll/obu"
-	xmlns:ext="http://example.com/ll/extensions">
+        xmlns:ext="http://example.com/ll/extension">
   <namespace uri="http://example.com/ll/obu"/>
   <prefix value="obu"/>
-  <import module="ll-extensions">
+  <import module="ll-extension">
     <prefix value="ext"/>
   </import>
   <container name="users">
@@ -23,8 +23,7 @@
   </container>
   <container name="admins">
     <ext:metadata>
-      <ext:data>fake metadata</ext:data>
-      <ext:author name="ll"/>
+        <ext:data>fake metadata</ext:data>
     </ext:metadata>
     <leaf-list name="admin">
       <ordered-by value="user"/>
