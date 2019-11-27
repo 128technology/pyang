@@ -374,7 +374,8 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
   </xsl:template>
 
   <xsl:template match="*">
-    <xsl:copy-of select="."/>
+    <!-- Do nothing for elements in namespaces other than rng, to prevent the
+    outputting of text nodes defined by extensions -->
   </xsl:template>
 
   <xsl:template match="rng:oneOrMore" mode="process">
